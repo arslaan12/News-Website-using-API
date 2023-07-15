@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Project</title>
+    <link rel="shortcut icon" href="./Assets/News-Logo.png" type="image/x-icon">
+    <!-- LINKING CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAV BAR -->
+    <nav> 
+        <div class="main-nav container flex">
+            <!-- NEWS LOGO -->
+            <a href="#" onclick="reload()" class="company-logo">
+                <img src="./Assets/News-Logo.png" alt="Logo not found">
+            </a>
+            <!-- NEWS CATEGORIES -->
+            <div class="nav-links">
+                <ul class="flex">
+                    <li class="hover-link nav-item" id="edu" onclick="onNavItemClick('edu')">Education</li>
+                    <li class="hover-link nav-item" id="entertain" onclick="onNavItemClick('entertain')">Entertainment</li>
+                    <li class="hover-link nav-item" id="fin" onclick="onNavItemClick('fin')">Finance</li>
+                    <li class="hover-link nav-item" id="ipl" onclick="onNavItemClick('ipl')">IPL</li>
+                    <li class="hover-link nav-item" id="cs" onclick="onNavItemClick('cs')">Computer Science</li>
+                </ul>
+            </div>
+            <!-- SEARCH BAR -->
+            <div class="search-bar flex">
+                <input id="search-text" type="text" class="news-input" placeholder="e.g. Chandrayaan-3">
+                <button id="search-button" class="search-button">Search</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN BODY -->
+    <main>
+        <div class="cards-container container flex" id="cards-container">
+            </div>
+            
+        </div>
+    </main>  
+    
+    <!-- USING TEMPLATE -->
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is the title</h3>
+                <h6 class="news-source" id="news-source">End gadget 24/02/2023</h6>
+                <p class="news-desc" id="news-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione et magni minus adipisci impedit deserunt ipsam veniam quisquam accusamus maxime?</p>
+            </div>
+    </template>
+
+    <!-- LINKING JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>
